@@ -2,6 +2,12 @@
 birthyear = 1970
 breachyear = 2017
 repeat = 'y'
+threat = ["Data breaches are incidents where information is taken without permission.\n", "Identity theft is when a person uses someone else's personal information without permission.\n", "Phishing emails are emails crafted to look real and convince people to share personal information.\n", "Social engineering is when a person manipulates a victim to give up information.\n", "Ok. :(\n"]
+cia = ["Confidentiality makes sure data is private.\n", ]
+
+#functions
+def choose(topic, list):
+  print(list[topic])
 
 #introduction
 print("Hello! I'm CyHelp.")
@@ -17,22 +23,12 @@ input("[Press enter to continue.]\n")
 print("These people can be governments, nations, companies, communities, organizations and individuals.")
 #interaction
 while repeat.lower() == 'y':
-  topic = input("Which of the possible threats would you like to learn about?\n[Enter the lowercase letter of the following options: (a) Data breaches, (b) Identity Theft, (c) Phishing emails, (d) Social engineering, or (e) none.]\n")
-  if topic.lower() == "a":
-    print("Data breaches are incidents where information is taken without permission.\n")
-  elif topic.lower() == "b":
-    print("Identity theft is when a person uses someone else's personal information without permission.\n")
-  elif topic.lower() == "c":
-    print("Phishing emails are emails crafted to look real and convince people to share personal information.\n")
-  elif topic.lower() == "d":
-    print("Social engineering is when a person manipulates a victim to give up information.\n")
-  elif topic.lower() == "e":
-    print("Ok. :(\n")
-    repeat = 'n'
-  else:
-    print("Sorry, I didn't catch that. Choose one of the options listed.")
-
-  repeat = input("Would you like to learn about another threat? [Enter y for yes]\n")
+  try:
+    topic = int(input("Which of the possible threats would you like to learn about?\n[Enter the lowercase letter of the following options: (1) Data breaches, (2) Identity Theft, (3) Phishing emails, (4) Social engineering, or (5) none.]\n")) -1 
+    choose(topic, threat)
+    repeat = input("Would you like to learn about another threat? [Enter y for yes]\n")
+  except:
+    print("Sorry, I didn't catch that. Choose one of the options listed.\n")
 #more information
 print("""The NIST framework is used to identify the areas that need to be covered in order to be prepared for cybersecurity threats.\nThese are:
 Identify - identifying the threat
