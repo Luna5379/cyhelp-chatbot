@@ -82,7 +82,26 @@ while repeat.lower() == 'y':
 print("Did you know the average time it takes an unauthorized person 166 days to compromise a system? This is because it is a long process with many steps.")
 topic = input("Would you like to learn about the Cyberkill chain, a common set of steps hackers have to follow to compromise a system? [Enter 'y' for yes]\n")
 if topic.lower() == "y":
-  print("Confidentiality makes sure data is private.\n")
+  print("""The Cyberkill chain follows the following set of steps:
+  1) Reconnaissance - first the hackers harvest email addresses, conference information, etc.
+  2) Weaponization - then they couple exploits with backdoors into deliverable payloads.
+  3) Delivery - the weaponized bundle is delivered to the victim via email, web, usb, etc.
+  4) Exploitation - the vulnerability in the bundle is then exploited to execute code on the victim's system.
+  5) Installation - the malware is then installed onto the asset.
+  6) Command and Control - the channel is commanded for remote manipulation of the victim.
+  7) Actions on objectives - with 'hands on keyboard' access, the intruders can now accompish their original goals.\n""")
+  
+topic = input("Would you like to hear about how you can protect yourself online? [Enter 'y' for yes]\n")
+if topic.lower() == "y":
+  print("""The easiest way to protect yourself is to have secure passwords.
+  Secrure passwords contain:
+  - Lowercase letters
+  - Uppercase letters
+  - Numbers
+  - Special Characters
+  - Are different for each account
+  In order to remember them all, it is recommended to store them in password managers.
+  Password managers are websites that are made especially to store all your passwords safely and easily, allowing you to store all of your passwords in one place with fewer worries about their security.\n""")
 
 #goodbye
 print("Thanks for chatting with me, and I hope you learned something new!")
