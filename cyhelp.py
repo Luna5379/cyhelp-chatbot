@@ -15,9 +15,34 @@ input("[Press enter to continue.]\n")
 print("Cybersecurity refers to the practices that people use to protect computer systems and networks from digital threats.")
 input("[Press enter to continue.]\n")
 print("These people can be governments, nations, companies, communities, organizations and individuals.")
+#interaction
+while repeat.lower() == 'y':
+  topic = input("Which of the possible threats would you like to learn about?\n[Enter the lowercase letter of the following options: (a) Data breaches, (b) Identity Theft, (c) Phishing emails, (d) Social engineering, or (e) none.]\n")
+  if topic.lower() == "a":
+    print("Data breaches are incidents where information is taken without permission.\n")
+  elif topic.lower() == "b":
+    print("Identity theft is when a person uses someone else's personal information without permission.\n")
+  elif topic.lower() == "c":
+    print("Phishing emails are emails crafted to look real and convince people to share personal information.\n")
+  elif topic.lower() == "d":
+    print("Social engineering is when a person manipulates a victim to give up information.\n")
+  elif topic.lower() == "e":
+    print("Ok. :(\n")
+    repeat = 'n'
+  else:
+    print("Sorry, I didn't catch that. Choose one of the options listed.")
+
+  repeat = input("Would you like to learn about another threat? [Enter y for yes]\n")
+#more information
+print("""The NIST framework is used to identify the areas that need to be covered in order to be prepared for cybersecurity threats.\nThese are:
+Identify - identifying the threat
+Protect - protecting systems against the threat
+Detect - detecting the threat when it occurs
+Respond - responding quickly to the threat
+Recover - recovering from the threat""")
 input("[Press enter to continue.]\n")
 print("The CIA Triad is the model used to discuss cybersecurity. CIA stands for: Confidentiality, Integrity and Availabiity. (not the central intelligence agency!)\n")
-
+repeat = 'y'
 #revealing information they want to hear
 while repeat.lower() == 'y':
   topic = input("What would you like to learn more about?\n[Enter the lowercase letter of the following options: (a) confidentiality, (b) integrity, (c) availability, or (d) none.]\n")
@@ -36,7 +61,7 @@ while repeat.lower() == 'y':
   repeat = input("Would you like to learn about another pillar? [Enter y for yes]\n")
 
 #introducing data breach
-print("It has also been " + str(year-breachyear) + " years since the NHS WannaCry breach happened.\n")
+print("It has also been " + str(year-breachyear) + " years since the NHS WannaCry data breach happened.\n")
 repeat = 'y'
 
 #revealing information on breach that they want to hear
@@ -53,6 +78,11 @@ while repeat.lower() == 'y':
     print("Sorry, I didn't catch that. Choose one of the options listed.")
 
   repeat = input("Would you like to learn somethine else? [Enter y for yes]\n")
+
+print("Did you know the average time it takes an unauthorized person 166 days to compromise a system? This is because it is a long process with many steps.")
+topic = input("Would you like to learn about the Cyberkill chain, a common set of steps hackers have to follow to compromise a system? [Enter 'y' for yes]\n")
+if topic.lower() == "y":
+  print("Confidentiality makes sure data is private.\n")
 
 #goodbye
 print("Thanks for chatting with me, and I hope you learned something new!")
